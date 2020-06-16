@@ -1,9 +1,11 @@
 package myDataStructures
 
+import java.util.*
+
 class MyBinarySearchTree() {
     var root: MyTreeNode? = null
 
-    constructor(rootValue: Int):this() {
+    constructor(rootValue: Int) : this() {
         root = MyTreeNode(rootValue)
     }
 
@@ -40,6 +42,24 @@ class MyBinarySearchTree() {
             }
         }
         return currNode
+    }
+
+
+    fun BFS(value: Int): MyTreeNode? {
+
+        val queue: Queue<MyTreeNode> = LinkedList<MyTreeNode>()
+
+        queue.offer(root)
+
+        while (queue.isNotEmpty()) {
+            val node = queue.poll()
+            println(node.data)
+            if (node.data == value) return node
+            if (node.left != null) queue.offer(node.left)
+            if (node.right != null) queue.offer(node.right)
+        }
+
+        return MyTreeNode(-1)
     }
 }
 
