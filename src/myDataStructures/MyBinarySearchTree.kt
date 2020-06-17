@@ -44,6 +44,30 @@ class MyBinarySearchTree() {
         return currNode
     }
 
+    fun DFSInorder(root: MyTreeNode, list: MutableList<Int>): MutableList<Int> {
+        if (root.left != null) DFSInorder(root.left!!, list)
+        list.add(root.data)
+        if (root.right != null) DFSInorder(root.right!!, list)
+
+        return list
+    }
+
+    fun DFSPreOrder(root: MyTreeNode, list: MutableList<Int>): MutableList<Int> {
+        list.add(root.data)
+        if (root.left != null) DFSPreOrder(root.left!!, list)
+        if (root.right != null) DFSPreOrder(root.right!!, list)
+
+        return list
+    }
+
+    fun DFSPostOrder(root: MyTreeNode, list: MutableList<Int>): MutableList<Int> {
+
+        if (root.left != null) DFSPostOrder(root.left!!, list)
+        if (root.right != null) DFSPostOrder(root.right!!, list)
+        list.add(root.data)
+        return list
+    }
+
 
     fun BFS(value: Int): MyTreeNode? {
 
