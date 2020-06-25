@@ -1,6 +1,6 @@
 package problems.medium
 
-import myDataStructures.*
+import myDataStructures.MyBinarySearchTree
 import java.util.*
 import kotlin.collections.HashMap
 import kotlin.math.max
@@ -9,10 +9,54 @@ import kotlin.math.min
 
 fun main() {
 
-    productExceptSelf(intArrayOf(1,2,3,4))
+    //  productExceptSelf(intArrayOf(1,2,3,4))
 
-//    val tree = MyBinarySearchTree(12);
+    val set = hashSetOf<Int>()
+    val tree = MyBinarySearchTree()
+
+    tree.insert(9)
+    tree.insert(4)
+    tree.insert(6)
+    tree.insert(20)
+    tree.insert(170)
+    tree.insert(15)
+    tree.insert(1)
+
+
+    val list = mutableListOf<Int>()
+    tree.DFSInorder(tree.root!!, list)
+    println(list.joinToString("-"))
+
+    list.clear()
+    tree.DFSPreOrder(tree.root!!, list)
+    println(list.joinToString("-"))
+
+    list.clear()
+    tree.DFSPostOrder(tree.root!!, list)
+    println(list.joinToString("-"))
+
+//    repeat(10000){
+//        val rand = Random.nextInt(0, 14763)
+//        if(set.add(rand)) tree.insert(rand)
+//    }
 //
+//    val look = Random.nextInt(0, 14763)
+//
+//
+//    val dfsMeasureTime = measureNanoTime {
+//        println(tree.BFS(look)?.data)
+//    }
+//
+//    val binarySearchMeasureTime = measureNanoTime {
+//        println(tree.lookup(look))
+//    }
+//
+//
+//    println("DFS time : $dfsMeasureTime")
+//    println("Binary Search time : $binarySearchMeasureTime")
+//
+//    println("Diff: ${binarySearchMeasureTime - dfsMeasureTime}")
+
 //    tree.insert(10)
 //    tree.insert(15)
 //    tree.insert(16)
@@ -21,7 +65,7 @@ fun main() {
 //    tree.insert(4)
 //    tree.insert(99)
 //
-//    print(tree.lookup(8))
+//    print(tree.BFS(8)?.data)
 
 
    //val stack =  QueueBasedOnLinkedList()
@@ -63,17 +107,17 @@ fun main() {
 //    obj.deleteAtIndex(1)
 //    obj.get(1)
 
-    val word = "cars"
-    val dict = listOf<String>("car", "rs", "ca")
-    //  println(wordBreak(word, dict))
-
-    // print(sortedSquares(intArrayOf(-1, 3, 9, 11, 24)))
-
-
-    val nums1 = intArrayOf(0)
-    val m = 0
-    val nums2 = intArrayOf(3, 2, 2, 3)
-    val n = 3
+//    val word = "cars"
+//    val dict = listOf<String>("car", "rs", "ca")
+//    //  println(wordBreak(word, dict))
+//
+//    // print(sortedSquares(intArrayOf(-1, 3, 9, 11, 24)))
+//
+//
+//    val nums1 = intArrayOf(0)
+//    val m = 0
+//    val nums2 = intArrayOf(3, 2, 2, 3)
+//    val n = 3
 
 //    removeElement(nums2, n)
 
