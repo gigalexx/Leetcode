@@ -1,4 +1,4 @@
-package Patterns.SlidingWindows
+package problems.easy
 
 fun main() {
 
