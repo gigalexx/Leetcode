@@ -2,7 +2,7 @@ package problems.easy
 
 fun main(){
 
-   sortedSquares(intArrayOf(1,2,4,6,8))
+   print(sortedSquares2(intArrayOf(1,2,4,6,8)).joinToString(","))
 }
 fun sortedSquares(A: IntArray): IntArray {
     val array = IntArray(A.size)
@@ -21,6 +21,30 @@ fun sortedSquares(A: IntArray): IntArray {
             indexEnd--
         }
         arrayIndex--
+    }
+    return array
+}
+
+fun sortedSquares2(A: IntArray): IntArray {
+
+    val array = IntArray(A.size)
+    var p1 = 0
+    var p2 = A.lastIndex
+    var arrayIndex = p2
+
+    while (p1 < p2){
+
+        val p1s = A[p1] * A[p1]
+        val p2s = A[p2] * A[p2]
+
+        if(p1s > p2s) {
+            array[arrayIndex--] = p1s
+            p1++
+        } else {
+            array[arrayIndex--] = p2s
+            p2--
+        }
+
     }
     return array
 }
