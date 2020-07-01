@@ -5,6 +5,13 @@ package problems.medium
 //Medium
 //Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 <= i < j < k < n that satisfy the condition nums[i] + nums[j] + nums[k] < target.
 
+//Time complexity #
+//So, overall searchTriplets() will take O(N * logN + N^3)O(N∗logN+N3), which is asymptotically equivalent to O(N^3)
+//
+//Space complexity #
+//Ignoring the space required for the output array, the space complexity of the above algorithm will be O(N) which is required for sorting.
+
+
 fun main() {
 
 
