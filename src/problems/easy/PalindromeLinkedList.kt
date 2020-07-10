@@ -26,6 +26,7 @@ SC -> O(1)
 
 fun main() {
 
+    println(isPalindrome2(ListNode(0, ListNode(0, null))))
 }
 
 fun isPalindrome2(_head: ListNode?): Boolean {
@@ -56,7 +57,7 @@ fun isPalindrome2(_head: ListNode?): Boolean {
 
     reverse(copyOfSecondHalf)
 
-    if (head == null && headSecondHalf == null) return true
+    if (head == null || headSecondHalf == null) return true
 
     return false
 }
