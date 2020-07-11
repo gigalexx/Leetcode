@@ -39,17 +39,17 @@ fun reorderList(head: ListNode?): Unit {
     var slow = head
     var fast = head
 
-    while (fast != null && fast.next != null) {
+    while (fast != null && fast.next != null) {    // finding middle of list
         slow = slow?.next
         fast = fast.next!!.next
     }
 
-    var headOfSecondHalf = reverse3(slow)
+    var headOfSecondHalf = reverse3(slow)   // reverse second half of list
 
     fast = head
 
 
-    while (headOfSecondHalf?.next != null) {
+    while (headOfSecondHalf?.next != null) {           // merge both half of list
         val tempF = fast?.next
         val tempS = headOfSecondHalf.next
         fast?.next = headOfSecondHalf
