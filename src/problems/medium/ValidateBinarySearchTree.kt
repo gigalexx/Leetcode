@@ -1,6 +1,6 @@
 package problems.medium
 
-import Algorithms.TreeNode
+import algorithms.TreeNode
 
 fun main() {
 

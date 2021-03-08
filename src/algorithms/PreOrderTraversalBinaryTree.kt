@@ -1,4 +1,4 @@
-package Algorithms
+package algorithms
 
 import java.util.*
 import kotlin.collections.ArrayList
@@ -28,7 +28,7 @@ fun main() {
 
 }
 
-fun preorderTraversal(root: TreeNode?): List<Int> {  //Time and Space = O(n)
+fun preOrderTraversal(root: TreeNode?): List<Int> {  //Time and Space = O(n)
 
     val list = mutableListOf<Int>()
     val stack = mutableListOf<TreeNode>()
@@ -89,6 +89,7 @@ fun helper(root: TreeNode?, res: MutableList<Int>) {
 
 fun postorderTraversal(root: TreeNode?): List<Int> {
 
+
     val ans = mutableListOf<Int>()
     val stack = Stack<TreeNode?>()
     if (root == null) return ans
@@ -97,11 +98,11 @@ fun postorderTraversal(root: TreeNode?): List<Int> {
     while (!stack.isEmpty()) {
         val cur = stack.pop()
         ans.add(0, cur?.value!!)
-        if (cur!!.left != null) {
-            stack.push(cur!!.left)
+        if (cur.left != null) {
+            stack.push(cur.left)
         }
-        if (cur!!.right != null) {
-            stack.push(cur!!.right)
+        if (cur.right != null) {
+            stack.push(cur.right)
         }
     }
     return ans

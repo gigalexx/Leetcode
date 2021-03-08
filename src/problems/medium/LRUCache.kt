@@ -4,6 +4,8 @@ import java.util.*
 
 
 fun main() {
+
+
     val lruCache = LRUCache(5)
     lruCache.put(1, 1)
     lruCache.put(2, 2)
@@ -25,7 +27,7 @@ class LRUCache(private val capacity: Int) {
     class Node(var key: Int, var value: Int)
 
 
-    operator fun get(key: Int): Int {
+    fun get(key: Int): Int {
         return if (map.containsKey(key)) {
             val node = map[key]
             ll.remove(node)

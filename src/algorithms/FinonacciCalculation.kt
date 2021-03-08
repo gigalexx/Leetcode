@@ -1,4 +1,4 @@
-package Algorithms
+package algorithms
 private const val INDEX = 100
 fun main() {
 

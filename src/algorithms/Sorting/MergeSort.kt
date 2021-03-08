@@ -1,4 +1,4 @@
-package Algorithms.Sorting
+package algorithms.Sorting
 
 fun main() {
     print(megreSort(intArrayOf(6, 3, 8, 1, 0, 4, 23, 6, 8, 54, 73, 6)).joinToString(" - "))

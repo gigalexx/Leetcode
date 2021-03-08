@@ -8,9 +8,12 @@ public class LicenseKeyFormatting {
 
     public static void main(String[] args) {
 
+        String str = null;
+
         LicenseKeyFormatting licenseKeyFormatting = new LicenseKeyFormatting();
 
         System.out.println((licenseKeyFormatting.licenseKeyFormatting2("5F3Z-2e-9-w", 4)));
+
     }
 
     public String licenseKeyFormatting(String S, int K) {
